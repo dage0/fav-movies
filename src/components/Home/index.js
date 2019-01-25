@@ -18,7 +18,7 @@ class Home extends Component {
   }
 
   renderCards() {
-    const { data: { myFavMovies, loading } } = this.props;
+    const { data: { myFavMovies = [], loading } } = this.props;
     if (loading) {
       return <span>loading...</span>;
     }

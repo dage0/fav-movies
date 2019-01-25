@@ -15,7 +15,7 @@ import './flexbox.css';
 
 
 const client = new ApolloClient({
-  link: new HttpLink({ uri: 'https://x717qx9vxq.sse.codesandbox.io/' }),
+  link: new HttpLink({ uri: 'https://zymx60m0x.sse.codesandbox.io/' }),
   cache: new InMemoryCache(),
 });
 

@@ -1,3 +1,13 @@
+#create-react-app v2 + react-router - apollo-client
+
+ Graphql api [Codepen](https://zymx60m0x.sse.codesandbox.io/)
+ Codepen [Codepen](https://codesandbox.io/s/github/dage0/movies-api)
+ server repo [Codepen](https://github.com/dage0/movies-api)
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
