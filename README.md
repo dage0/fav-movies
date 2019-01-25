@@ -1,9 +1,9 @@
-#create-react-app v2 + react-router - apollo-client
+# create-react-app v2 + react-router - apollo-client
 
  - Graphql [api](https://zymx60m0x.sse.codesandbox.io/)
  - Codepen [instance](https://codesandbox.io/s/github/dage0/movies-api)
- - server repo [Github](https://github.com/dage0/movies-api)
-
+ - Server repo [Github](https://github.com/dage0/movies-api)
+ - [Demo](https://dage0.github.io/fav-movies/) 
 
 
 
