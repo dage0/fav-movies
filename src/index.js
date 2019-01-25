@@ -1,12 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  NavLink,
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
+import { ApolloProvider } from 'react-apollo';
+import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';
+import Home from './components/Home';
+import Info from './components/Info';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './flexbox.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const client = new ApolloClient({
+  link: new HttpLink({ uri: 'https://x717qx9vxq.sse.codesandbox.io/' }),
+  cache: new InMemoryCache(),
+});
+
+const AppWithProvider = () => (
+  <ApolloProvider client={client}>
+    <Router>
+      <nav>
+        <ul className="button">
+          <li>
+            <NavLink activeClassName="current" to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName="current" to="/info">Info</NavLink>
+          </li>
+        </ul>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/info" component={Info} />
+        </Switch>
+      </nav>
+    </Router>
+  </ApolloProvider>
+);
+
+ReactDOM.render(<AppWithProvider />, document.getElementById('root'));
